@@ -46,3 +46,39 @@ for (let i = 0; i < staff.profilePic.length; i++){
 }
 profilePicsList += `</ul>`;
 profilesElement.innerHTML = profilePicsList;
+
+
+/* Da quì in poi ho deciso di ricominciare da capo il codice con query selector e tutto il resto */
+// Recupero gli elementi dal DOM 
+const cardProfile = document.querySelectorAll('.card-img-top')
+const cardName = document.querySelectorAll('.card-title')
+const cardRole = document.querySelectorAll('.card-text')
+
+
+// // Ciclo for per stampare in pagina i nomi dello staff 
+// for (let i = 0; i < staff.name.length; i++){
+//     const names = staff.name[i]
+//     cardName[i].innerHTML = names
+// }
+// // Ciclo for per stampare in pagina i ruoli dello staff 
+// for (let i = 0; i < staff.role.length; i++){
+//     const roles = staff.role[i]
+//     cardRole[i].innerHTML = roles
+// }
+// // Ciclo for per stampare in pagina le foto dello staff 
+// for (let i = 0; i < staff.profilePic.length; i++){
+//     const profilePic = staff.profilePic[i]
+//     cardProfile[i].src = `/img/${profilePic}`
+// }
+
+// Ho fatto un unico ciclo for (solo in questo caso perché sappiamo che ogni array è della stessa lunghezza)
+for (let i = 0; i < staff.profilePic.length; i++){
+    const profilePic = staff.profilePic[i]
+    cardProfile[i].src = `/img/${profilePic}`
+    const roles = staff.role[i]
+    cardRole[i].innerHTML = roles
+    const names = staff.name[i]
+    cardName[i].innerHTML = names
+}
+
+
