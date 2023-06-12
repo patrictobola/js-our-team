@@ -6,3 +6,8 @@ const staff = {
     profilePic: ["wayne-barnett-founder-ceo.jpg", "angela-caroll-chief-editor.jpg", "walter-gordon-office-manager.jpg", "angela-lopez-social-media-manager.jpg", "scott-estrada-developer.jpg", "barbara-ramos-graphic-designer.jpg"]
 }
 
+
+
+for (let key in staff){
+    console.log(key, staff[key])
+}
